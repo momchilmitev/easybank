@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+/* Variables  */
+:root {
+  /* Colors  */
+  --gradient: linear-gradient(135deg, #33d35e 0%, #2ab6d9 99.58%);
+  --green: #30c88f;
+  --gray: #9597a5;
+  --dark: #2d314d;
+
+  /* Font */
+  --font: "Public Sans", sans-serif;
+}
+
+/* Simple reset  */
+body {
+  font-family: var(--font);
+  font-size: 18px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

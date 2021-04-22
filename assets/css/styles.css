@@ -31,8 +31,6 @@ body {
 
 .app__btn--toggle {
   cursor: pointer;
-  width: 24px;
-  height: 11px;
 }
 
 .app__logo {

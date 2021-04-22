@@ -20,3 +20,31 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Components  */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 24px;
+}
+
+.app__btn--toggle {
+  cursor: pointer;
+  width: 24px;
+  height: 11px;
+}
+
+.app__logo {
+  width: 139px;
+  height: 20px;
+}
+
+/* Header styles  */
+.app__header .app__btn {
+  display: none;
+}
+
+.app__navigation--main {
+  display: none;
+}

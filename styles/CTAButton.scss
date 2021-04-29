@@ -1,0 +1,16 @@
+.app__btn--cta {
+  border: none;
+  padding: 8px 33px;
+  background: var(--gradient);
+  border-radius: 22px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+  color: #fff;
+
+  &:hover {
+    cursor: pointer;
+    background: var(--gradient-hover);
+  }
+}

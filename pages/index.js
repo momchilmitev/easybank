@@ -1,4 +1,5 @@
 import Head from "next/head";
+import CTAButton from "../components/CTAButton";
 
 export default function Home() {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
               Careers
             </a>
           </nav>
-          <button class="app__btn app__btn--cta">Request Invite</button>
+          <CTAButton text="Request Invite" />
           <img
             class="app__btn--toggle"
             src="./assets/icons/icon-hamburger.svg"
@@ -53,8 +54,8 @@ export default function Home() {
                 one-stop-shop for spending, saving, budgeting, investing, and
                 much more.
               </p>
-              <button class="app__btn app__btn--cta">Request Invite</button>
             </div>
+            <CTAButton text="Request Invite" />
             <img src="./assets/images/bg-intro-mobile.svg" alt="intro image" />
             <img src="./assets/images/image-mockups.png" alt="mockups image" />
           </section>
@@ -246,7 +247,7 @@ export default function Home() {
           </a>
         </nav>
         <section class="app__footer-button">
-          <button class="app__btn app__btn--cta">Request Invite</button>
+          <CTAButton text="Request Invite" />
           <p class="app__copyrights">© Easybank. All Rights Reserved</p>
         </section>
       </footer>

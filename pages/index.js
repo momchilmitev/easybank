@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import CTAButton from "../components/CTAButton";
 
 export default function Home() {
@@ -11,12 +12,14 @@ export default function Home() {
         <title>EASYBANK</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <header class="app__header">
-        <div class="container">
-          <img
-            class="app__logo"
-            src="./assets/images/logo.svg"
+      <header className="app__header">
+        <div className="container">
+          <Image
+            className="app__logo"
+            src="/images/logo.svg"
             alt="website logo"
+            width={139}
+            height={20}
           />
 
           <nav class="app__navigation app__navigation--main">
@@ -186,10 +189,12 @@ export default function Home() {
       </main>
       <footer class="app__footer">
         <section class="app__footer-icons">
-          <img
-            class="app__footer-logo"
-            src="./assets/images/logo.svg"
-            alt="app logo"
+          <Image
+            className="app__logo app__logo--footer"
+            src="/images/logo.svg"
+            alt="website logo"
+            width={139}
+            height={20}
           />
           <div class="app__footer-socials">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">

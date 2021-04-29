@@ -1,8 +1,12 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import CTAButton from "../components/CTAButton";
+import ToggleNavButton from "../components/ToggleNavButton";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -40,11 +44,7 @@ export default function Home() {
             </a>
           </nav>
           <CTAButton text="Request Invite" />
-          <img
-            class="app__btn--toggle"
-            src="./assets/icons/icon-hamburger.svg"
-            alt="mobile menu icon"
-          />
+          <ToggleNavButton isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </header>
       <main class="app__main">

@@ -6,6 +6,9 @@ import ToggleNavButton from "../components/ToggleNavButton";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const navClass = isOpen
+    ? "app__navigation--main app__navigation--open"
+    : "app__navigation--main app__navigation--close";
 
   return (
     <>
@@ -26,7 +29,7 @@ export default function Home() {
             height={20}
           />
 
-          <nav class="app__navigation app__navigation--main">
+          <nav class={navClass}>
             <a class="app__link" href="#">
               Home
             </a>

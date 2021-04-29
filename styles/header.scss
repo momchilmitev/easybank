@@ -1,0 +1,20 @@
+.app {
+  &__header {
+    & .app__btn--cta {
+      display: none;
+    }
+  }
+
+  &__navigation {
+    &--main {
+    }
+
+    &--open {
+      display: block;
+    }
+
+    &--close {
+      display: none;
+    }
+  }
+}

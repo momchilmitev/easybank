@@ -1,6 +1,7 @@
 import "../styles/globals.scss";
 import "../styles/CTAButton.scss";
 import "../styles/header.scss";
+import "../styles/main.scss";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

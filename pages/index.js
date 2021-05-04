@@ -51,6 +51,16 @@ export default function Home() {
         </div>
       </header>
       <main class="app__main">
+        <img
+          className="intro-img"
+          src="/images/bg-intro-mobile.svg"
+          alt="intro image"
+        />
+        <img
+          className="mockups-img"
+          src="/images/image-mockups.png"
+          alt="mockups image"
+        />
         <div class="container">
           <section class="app__hero">
             <div class="app__hero-content">
@@ -62,8 +72,6 @@ export default function Home() {
               </p>
             </div>
             <CTAButton text="Request Invite" />
-            <img src="./assets/images/bg-intro-mobile.svg" alt="intro image" />
-            <img src="./assets/images/image-mockups.png" alt="mockups image" />
           </section>
           <section class="app__services">
             <section class="app__services-info">

@@ -3,12 +3,39 @@ import Head from "next/head";
 import Image from "next/image";
 import CTAButton from "../components/CTAButton";
 import ToggleNavButton from "../components/ToggleNavButton";
+import Service from "../components/Service";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const navClass = isOpen
     ? "app__navigation--main app__navigation--open"
     : "app__navigation--main app__navigation--close";
+  const services = [
+    {
+      icon: "/icons/icon-online.svg",
+      title: "Online Banking",
+      description:
+        "Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.",
+    },
+    {
+      icon: "/icons/icon-budgeting.svg",
+      title: "Simple Budgeting",
+      description:
+        "See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.",
+    },
+    {
+      icon: "/icons/icon-onboarding.svg",
+      title: "Fast Onboarding",
+      description:
+        "We don’t do branches. Open your account in minutes online and start taking control of your finances right away.",
+    },
+    {
+      icon: "/icons/icon-api.svg",
+      title: "Open API",
+      description:
+        "Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.",
+    },
+  ];
 
   return (
     <>
@@ -61,8 +88,9 @@ export default function Home() {
           src="/images/image-mockups.png"
           alt="mockups image"
         />
-        <div class="container">
-          <section class="app__hero">
+
+        <section class="app__hero">
+          <div class="container">
             <div class="app__hero-content">
               <h2 class="app__hero-title">Next generation digital banking</h2>
               <p class="app__hero-description">
@@ -72,8 +100,10 @@ export default function Home() {
               </p>
             </div>
             <CTAButton text="Request Invite" />
-          </section>
-          <section class="app__services">
+          </div>
+        </section>
+        <section class="app__services">
+          <div class="container">
             <section class="app__services-info">
               <h3 class="app__services-title">Why choose Easybank?</h3>
               <p class="app__services-description">
@@ -82,121 +112,76 @@ export default function Home() {
               </p>
             </section>
             <section class="app__services-container">
-              <article class="app__service">
-                <img
-                  class="app__servise-icon"
-                  src="./assets/icons/icon-online.svg"
-                  alt="service icon"
-                />
-                <h4 class="app__service-title">Online Banking</h4>
-                <p class="app__service-description">
-                  Our modern web and mobile applications allow you to keep track
-                  of your finances wherever you are in the world.
-                </p>
-              </article>
-              <article class="app__service">
-                <img
-                  class="app__servise-icon"
-                  src="./assets/icons/icon-budgeting.svg"
-                  alt="service icon"
-                />
-                <h4 class="app__service-title">Simple Budgeting</h4>
-                <p class="app__service-description">
-                  See exactly where your money goes each month. Receive
-                  notifications when you’re close to hitting your limits.
-                </p>
-              </article>
-              <article class="app__service">
-                <img
-                  class="app__servise-icon"
-                  src="./assets/icons/icon-onboarding.svg"
-                  alt="service icon"
-                />
-                <h4 class="app__service-title">Fast Onboarding</h4>
-                <p class="app__service-description">
-                  We don’t do branches. Open your account in minutes online and
-                  start taking control of your finances right away.
-                </p>
-              </article>
-              <article class="app__service">
-                <img
-                  class="app__servise-icon"
-                  src="./assets/icons/icon-api.svg"
-                  alt="service icon"
-                />
-                <h4 class="app__service-title">Open API</h4>
-                <p class="app__service-description">
-                  Manage your savings, investments, pension, and much more from
-                  one account. Tracking your money has never been easier.
-                </p>
-              </article>
+              {services.map(service => (
+                <Service key={service.title} service={service} />
+              ))}
             </section>
-          </section>
-          <section class="app__articles">
-            <h3 class="app__articles-heading">Latest Articles</h3>
-            <article class="app__article">
-              <img
-                class="app__article-title"
-                src="./assets/images/image-currency.jpg"
-                alt="article picture"
-              />
-              <p class="app__article-author">By Claire Robinson</p>
-              <h4 class="app__article-title">
-                Receive money in any currency with no fees
-              </h4>
-              <p class="app__article-content">
-                The world is getting smaller and we’re becoming more mobile. So
-                why should you be forced to only receive money in a single …
-              </p>
-            </article>
-            <article class="app__article">
-              <img
-                class="app__article-title"
-                src="./assets/images/image-restaurant.jpg"
-                alt="article picture"
-              />
-              <p class="app__article-author">By Wilson Hutton</p>
-              <h4 class="app__article-title">
-                Treat yourself without worrying about money
-              </h4>
-              <p class="app__article-content">
-                Our simple budgeting feature allows you to separate out your
-                spending and set realistic limits each month. That means you …
-              </p>
-            </article>
-            <article class="app__article">
-              <img
-                class="app__article-title"
-                src="./assets/images/image-plane.jpg"
-                alt="article picture"
-              />
-              <p class="app__article-author">By Wilson Hutton</p>
-              <h4 class="app__article-title">
-                Take your Easybank card wherever you go
-              </h4>
-              <p class="app__article-content">
-                We want you to enjoy your travels. This is why we don’t charge
-                any fees on purchases while you’re abroad. We’ll even show you …
-              </p>
-            </article>
-            <article class="app__article">
-              <img
-                class="app__article-title"
-                src="./assets/images/image-confetti.jpg"
-                alt="article picture"
-              />
-              <p class="app__article-author">By Claire Robinson</p>
-              <h4 class="app__article-title">
-                Our invite-only Beta accounts are now live!
-              </h4>
-              <p class="app__article-content">
-                After a lot of hard work by the whole team, we’re excited to
-                launch our closed beta. It’s easy to request an invite through
-                the site ...
-              </p>
-            </article>
-          </section>
-        </div>
+          </div>
+        </section>
+        <section class="app__articles">
+          <h3 class="app__articles-heading">Latest Articles</h3>
+          <article class="app__article">
+            <img
+              class="app__article-title"
+              src="./assets/images/image-currency.jpg"
+              alt="article picture"
+            />
+            <p class="app__article-author">By Claire Robinson</p>
+            <h4 class="app__article-title">
+              Receive money in any currency with no fees
+            </h4>
+            <p class="app__article-content">
+              The world is getting smaller and we’re becoming more mobile. So
+              why should you be forced to only receive money in a single …
+            </p>
+          </article>
+          <article class="app__article">
+            <img
+              class="app__article-title"
+              src="./assets/images/image-restaurant.jpg"
+              alt="article picture"
+            />
+            <p class="app__article-author">By Wilson Hutton</p>
+            <h4 class="app__article-title">
+              Treat yourself without worrying about money
+            </h4>
+            <p class="app__article-content">
+              Our simple budgeting feature allows you to separate out your
+              spending and set realistic limits each month. That means you …
+            </p>
+          </article>
+          <article class="app__article">
+            <img
+              class="app__article-title"
+              src="./assets/images/image-plane.jpg"
+              alt="article picture"
+            />
+            <p class="app__article-author">By Wilson Hutton</p>
+            <h4 class="app__article-title">
+              Take your Easybank card wherever you go
+            </h4>
+            <p class="app__article-content">
+              We want you to enjoy your travels. This is why we don’t charge any
+              fees on purchases while you’re abroad. We’ll even show you …
+            </p>
+          </article>
+          <article class="app__article">
+            <img
+              class="app__article-title"
+              src="./assets/images/image-confetti.jpg"
+              alt="article picture"
+            />
+            <p class="app__article-author">By Claire Robinson</p>
+            <h4 class="app__article-title">
+              Our invite-only Beta accounts are now live!
+            </h4>
+            <p class="app__article-content">
+              After a lot of hard work by the whole team, we’re excited to
+              launch our closed beta. It’s easy to request an invite through the
+              site ...
+            </p>
+          </article>
+        </section>
       </main>
       <footer class="app__footer">
         <section class="app__footer-icons">

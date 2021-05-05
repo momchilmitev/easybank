@@ -33,6 +33,51 @@
       margin-bottom: 32px;
     }
   }
+
+  &__services {
+    & > .container {
+      margin: 0 24px;
+    }
+    background-color: #f4f5f7;
+    text-align: center;
+
+    &-info {
+      padding-top: 64px;
+      padding-bottom: 56px;
+    }
+
+    & p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 25px;
+      letter-spacing: -0.234375px;
+      color: #9597a5;
+    }
+
+    & h3 {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 38px;
+      letter-spacing: -0.571429px;
+      color: #2d314d;
+    }
+
+    & h4 {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      letter-spacing: -0.357143px;
+      color: #2d314d;
+    }
+  }
+
+  &__service {
+    padding-bottom: 32px;
+  }
 }
 
 .intro-img {

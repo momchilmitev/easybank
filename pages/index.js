@@ -150,10 +150,12 @@ export default function Home() {
           </div>
         </section>
         <section class="app__articles">
-          <h3 class="app__articles-heading">Latest Articles</h3>
-          {articles.map(article => (
-            <Article key={article.title} article={article} />
-          ))}
+          <div className="container">
+            <h3 class="app__articles-heading">Latest Articles</h3>
+            {articles.map(article => (
+              <Article key={article.title} article={article} />
+            ))}
+          </div>
         </section>
       </main>
       <footer class="app__footer">

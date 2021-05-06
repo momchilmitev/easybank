@@ -4,6 +4,7 @@ import Image from "next/image";
 import CTAButton from "../components/CTAButton";
 import ToggleNavButton from "../components/ToggleNavButton";
 import Service from "../components/Service";
+import Article from "../components/Article";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +35,36 @@ export default function Home() {
       title: "Open API",
       description:
         "Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.",
+    },
+  ];
+  const articles = [
+    {
+      img: "/images/image-currency.jpg",
+      author: "Claire Robinson",
+      title: "Receive money in any currency with no fees",
+      content:
+        "The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …",
+    },
+    {
+      img: "/images/image-restaurant.jpg",
+      author: "Wilson Hutton",
+      title: "Treat yourself without worrying about money",
+      content:
+        "Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …",
+    },
+    {
+      img: "/images/image-plane.jpg",
+      author: "Wilson Hutton",
+      title: "Take your Easybank card wherever you go",
+      content:
+        "We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you …",
+    },
+    {
+      img: "/images/image-confetti.jpg",
+      author: "Claire Robinson",
+      title: "Our invite-only Beta accounts are now live!",
+      content:
+        "After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site ...",
     },
   ];
 
@@ -120,67 +151,9 @@ export default function Home() {
         </section>
         <section class="app__articles">
           <h3 class="app__articles-heading">Latest Articles</h3>
-          <article class="app__article">
-            <img
-              class="app__article-title"
-              src="./assets/images/image-currency.jpg"
-              alt="article picture"
-            />
-            <p class="app__article-author">By Claire Robinson</p>
-            <h4 class="app__article-title">
-              Receive money in any currency with no fees
-            </h4>
-            <p class="app__article-content">
-              The world is getting smaller and we’re becoming more mobile. So
-              why should you be forced to only receive money in a single …
-            </p>
-          </article>
-          <article class="app__article">
-            <img
-              class="app__article-title"
-              src="./assets/images/image-restaurant.jpg"
-              alt="article picture"
-            />
-            <p class="app__article-author">By Wilson Hutton</p>
-            <h4 class="app__article-title">
-              Treat yourself without worrying about money
-            </h4>
-            <p class="app__article-content">
-              Our simple budgeting feature allows you to separate out your
-              spending and set realistic limits each month. That means you …
-            </p>
-          </article>
-          <article class="app__article">
-            <img
-              class="app__article-title"
-              src="./assets/images/image-plane.jpg"
-              alt="article picture"
-            />
-            <p class="app__article-author">By Wilson Hutton</p>
-            <h4 class="app__article-title">
-              Take your Easybank card wherever you go
-            </h4>
-            <p class="app__article-content">
-              We want you to enjoy your travels. This is why we don’t charge any
-              fees on purchases while you’re abroad. We’ll even show you …
-            </p>
-          </article>
-          <article class="app__article">
-            <img
-              class="app__article-title"
-              src="./assets/images/image-confetti.jpg"
-              alt="article picture"
-            />
-            <p class="app__article-author">By Claire Robinson</p>
-            <h4 class="app__article-title">
-              Our invite-only Beta accounts are now live!
-            </h4>
-            <p class="app__article-content">
-              After a lot of hard work by the whole team, we’re excited to
-              launch our closed beta. It’s easy to request an invite through the
-              site ...
-            </p>
-          </article>
+          {articles.map(article => (
+            <Article key={article.title} article={article} />
+          ))}
         </section>
       </main>
       <footer class="app__footer">

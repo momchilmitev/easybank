@@ -1,5 +1,5 @@
 const CTAButton = ({ text }) => {
-  return <button class="app__btn app__btn--cta">{text}</button>;
+  return <button className="app__btn app__btn--cta">{text}</button>;
 };
 
 export default CTAButton;

@@ -1,0 +1,47 @@
+.app {
+  &__footer {
+    padding: 40px 0px;
+    text-align: center;
+    color: #fff;
+    background-color: var(--dark);
+
+    &-socials {
+      margin: 32px 0;
+
+      &:hover {
+        fill: var(--green);
+      }
+
+      & > svg {
+        margin: 0 8px;
+      }
+    }
+
+    &-button > button {
+      margin: 32px 0;
+    }
+  }
+
+  &__logo--footer-text {
+    fill: #fff;
+  }
+
+  &__navigation--secondary {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.234375px;
+
+    & > .app__link {
+      padding: 4px 0;
+    }
+  }
+
+  &__copyrights {
+    opacity: 0.5;
+  }
+}

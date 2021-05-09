@@ -1,5 +1,4 @@
 const Service = ({ service }) => {
-  console.log(service);
   return (
     <article className="app__service">
       <img

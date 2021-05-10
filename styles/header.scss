@@ -47,3 +47,47 @@
     }
   }
 }
+
+@media (min-width: 1024px) {
+  .app {
+    &__header {
+      & > .container {
+        max-width: 1110px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        & > div:last-child {
+          display: none !important;
+        }
+      }
+
+      & .app__btn--cta {
+        display: initial;
+      }
+
+      & .app__btn--toggle {
+        display: none !important;
+      }
+    }
+
+    &__navigation {
+      &--close {
+        display: initial;
+        position: static;
+        height: initial;
+        width: initial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -0.107692px;
+        color: #9597a5;
+
+        & > a:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}

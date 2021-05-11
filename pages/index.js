@@ -109,11 +109,13 @@ export default function Home() {
         </div>
       </header>
       <main className="app__main">
-        <img
-          className="intro-img"
-          src="/images/bg-intro-mobile.svg"
-          alt="intro image"
-        />
+        <picture className="intro-img">
+          <source
+            media="(min-width:1024px)"
+            srcSet="/images/bg-intro-desktop.svg"
+          />
+          <img src="/images/bg-intro-mobile.svg" alt="intro image" />
+        </picture>
         <img
           className="mockups-img"
           src="/images/image-mockups.png"

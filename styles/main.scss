@@ -172,3 +172,48 @@
   transform: translateX(-50%);
   image-rendering: pixelated;
 }
+
+@media (min-width: 1024px) {
+  .app {
+    &__main {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    &__hero {
+      & > .container {
+        width: 447px;
+        height: 316px;
+        text-align: left;
+        margin: 170px 165px 0;
+      }
+
+      &-title {
+        text-align: left;
+      }
+    }
+
+    &__services {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .intro-img {
+    position: absolute;
+    width: 1233px;
+    height: 956px;
+    top: -275px;
+    right: -420px;
+    z-index: 0;
+  }
+
+  .mockups-img {
+    transform: initial;
+    left: initial;
+    top: -120px;
+    right: -130px;
+    width: 732px;
+    height: 901px;
+  }
+}

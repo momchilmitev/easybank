@@ -243,6 +243,11 @@
       &-img {
         height: 200px;
       }
+
+      &-title:hover {
+        cursor: pointer;
+        color: var(--green);
+      }
     }
   }
 

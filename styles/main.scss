@@ -196,6 +196,29 @@
     &__services {
       position: relative;
       z-index: 1;
+
+      & > .container {
+        margin: 0 165px;
+      }
+
+      &-info {
+        width: 635px;
+        text-align: left;
+      }
+
+      &-container {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &__service {
+      max-width: 255px;
+      text-align: left;
+
+      & h4 {
+        text-align: left;
+      }
     }
   }
 

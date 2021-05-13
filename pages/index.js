@@ -156,9 +156,11 @@ export default function Home() {
         <section className="app__articles">
           <div className="container">
             <h3 className="app__articles-heading">Latest Articles</h3>
-            {articles.map(article => (
-              <Article key={article.title} article={article} />
-            ))}
+            <section className="app__articles-container">
+              {articles.map(article => (
+                <Article key={article.title} article={article} />
+              ))}
+            </section>
           </div>
         </section>
       </main>

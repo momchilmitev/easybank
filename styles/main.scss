@@ -220,6 +220,30 @@
         text-align: left;
       }
     }
+
+    &__articles {
+      & > .container {
+        margin: 0 165px;
+      }
+
+      &-heading {
+        text-align: left;
+      }
+
+      &-container {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &__article {
+      max-width: 255px;
+      margin-bottom: 0;
+
+      &-img {
+        height: 200px;
+      }
+    }
   }
 
   .intro-img {

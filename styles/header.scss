@@ -73,9 +73,9 @@
 
     &__navigation {
       &--close {
-        display: initial;
+        display: block;
         position: static;
-        height: initial;
+        height: 100%;
         width: initial;
         font-style: normal;
         font-weight: normal;
@@ -88,6 +88,11 @@
           margin-right: 30px;
         }
       }
+    }
+
+    &__link:hover {
+      padding-bottom: 10px;
+      border-bottom: 4px solid var(--green);
     }
   }
 }
